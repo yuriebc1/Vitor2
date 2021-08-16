@@ -1,0 +1,124 @@
+<html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" crossorigin="anonymous"></script>
+  <title>Escolha de Plataforma</title>
+  <style>
+    main,
+    body {
+      background-color: #039be5;
+      font-family: 'montserrat', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      --normal-text: #212121;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main {
+      margin-top: 3em;
+      display: inline;
+      padding: 4em;
+      background: #FFF;
+      border-radius: 3px;
+      max-width: 720px;
+      min-width: 648px;
+      -webkit-box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.41);
+      -moz-box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.41);
+      box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.41);
+    }
+
+    .content {
+      padding: 1em;
+    }
+
+    .title h2 {
+      color: var(--normal-text);
+      font-weight: 800;
+      font-size: 2.5em;
+      color: #039be5;
+      margin-bottom: 0;
+    }
+
+    .title h2 span {
+      font-weight: 700;
+      color: #f4511e
+    }
+
+    p {
+      color: var(--normal-text);
+      margin-top: .2em;
+    }
+
+    .qrcode-wrapper {
+      color: var(--normal-text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 2em;
+
+    }
+    .qrcode-wrapper :first-child{
+      padding-bottom: 1em;
+      font-weight: 500;
+    }
+
+    .platform-select-buttons :first-child {
+      margin-right: .5em;
+    }
+
+    .store-link-image {
+      text-decoration: none;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+
+    .platform-select-indicator {
+      padding-bottom: 1em;
+      color: var(--normal-text);
+      font-weight: 600;
+    }
+
+    .store-link-image:hover {
+      -webkit-box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.36);
+      -moz-box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.36);
+      box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.36);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="title">
+      <h2>CONTA DIGITAL <span>GRÁTIS</span></h2>
+      <p>Baixe o APP e conta com o PAN</p>
+    </section>
+    <section class="content">
+
+      <div class="qrcode-wrapper">
+        <h2>Leia o QRcode abaixo e baixe o APP</h2>
+        <div id="qrcode" title="https://agx.link/IoKUk6@me"><canvas width="256" height="256" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+      </div>
+      
+      <div class="select-your-platform">
+        <h3 class="platform-select-indicator">Ou escolha sua plataforma:</h3>
+        <div class="platform-select-buttons">
+          <a href="https://app.appsflyer.com/id1410400504?pid=agx_int&amp;af_siteid=12&amp;af_ad_id=609c20bbb5662300032eb593&amp;clickid=611a9b304993c000042f4788&amp;af_sub_siteid=611a9b304993c000042f4788">
+            <img style="max-width: 30%" class="store-link-image" alt="Aplicativo banco PAN na AppleStore" src="https://github.com/AGX-Software/assets/blob/master/apple-store.png?raw=true"></a>
+            <a href="https://app.appsflyer.com/br.com.bancopan.cartoes?pid=agx_int&amp;af_siteid=12&amp;af_ad_id=609c20bbb5662300032eb593&amp;clickid=611a9b304993c000042f4788&amp;af_sub_siteid=611a9b304993c000042f4788">
+              <img style="max-width: 34%" class="store-link-image" alt="Aplicativo banco PAN na Google PlayStore" src="https://github.com/AGX-Software/assets/blob/master/google-play.png?raw=true"></a>
+            </div>
+          </div>
+        </section>
+  </main>
+
+  <script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "https://agx.link/IoKUk6@me");
+    </script>
+
+
+
+</body></html>
